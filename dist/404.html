@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      const segment = 1; // Adjust if your repo is in a subdirectory
+      const repo = location.pathname.split('/').slice(0, 1 + segment).join('/');
+      sessionStorage.redirect = repo + '/index.html';
+      location.replace(repo);
+    </script>
+  </head>
+  <body>
+    Redirecting to <a href="./">homepage</a>...
+  </body>
+</html>
